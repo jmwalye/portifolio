@@ -1,0 +1,176 @@
+/* Reset some default browser styling */
+/*
+Resets margin/padding for all elements, making things consistent
+ across browsers.
+box-sizing: border-box: Ensures padding/margin don’t increase the
+ element size.*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Set up the base font and background color */
+  /*Set font, background color, text color, and spacing*/
+  body {
+    /*font-family: Arial, sans-serif;*/
+    font-family: 'Poppins', sans-serif; /* Using Google Fonts */
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+  }
+
+  /* Header Styles */
+header {
+    background-color: #343a40;       /* Dark background */
+    color: white;                    /* White text */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    margin-bottom: 30px; /* Space below header */
+  }
+  
+  /* Header title (your name) */
+  header h1 {
+    margin-bottom: 10px;
+  }
+  
+  /* Navigation Styles */
+  nav ul {
+    list-style: none;  /* Remove bullet points */
+    display: flex;  /* Uses Flexbox to lay out the nav links horizontally. */
+    gap: 20px;         /* Spacing between items */
+    padding: 0;
+  }
+  
+  nav a {
+    color: #f8f9fa;                  /* Light text */
+    text-decoration: none;          /* Remove underline */
+    font-weight: bold;
+  }
+  /* Hover effect for links */
+  nav a:hover {
+    text-decoration: underline;     /* Underline on hover */
+  }
+  
+  /* General Section Styling 
+  Each section now has its own white box, some padding, and a soft 
+  shadow to make it stand out.*/
+section {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    opacity: 0; /* Start invisible for animation */
+    animation: fadeInUp 1s ease forwards;/* Animation for fade-in effect */
+    animation-delay: 0.3s;/* Delay for the animation to start */    
+  }
+  
+  /* Section Headings */
+  section h2 {
+    color: #343a40;
+    margin-bottom: 10px;
+  }
+
+  /* Individual project cards 
+    A lighter box for each project, with an accent border to catch 
+    the eye*/
+.project-card {
+    background-color: #f1f1f1;
+    padding: 15px;
+    margin-top: 10px;
+    border-left: 5px solid #007bff; /* A little accent on the side */
+    border-radius: 4px;
+  }
+  /*Give project titles a matching accent color.*/
+  .project-card h3 {
+    margin-bottom: 5px;
+    color: #007bff;
+  }
+
+  /* Contact Section Specific Styling */
+#contact p {
+    margin-bottom: 10px; /** Space between paragraphs */
+  }
+  
+  /* Style the email link */
+  #contact a {
+    color: #007bff;         /* Nice blue color */
+    text-decoration: none;  /* Remove underline */
+    font-weight: bold;
+  }
+  
+  #contact a:hover {
+    text-decoration: underline; /* Underline on hover */
+  }
+  
+  
+  /* Responsive Design for Mobile Device Screens Below 768px 
+  It activates only on screens 768px wide or smaller (e.g. phones).*/
+@media (max-width: 768px) {
+    body {
+      padding: 10px;
+    }
+  
+    header {
+      text-align: center;
+    }
+  
+    nav ul {
+      flex-direction: column; /* Stack nav links vertically */
+      gap: 10px;
+      margin-top: 10px;
+    }
+  
+    section {
+      padding: 15px;
+    }
+
+    /** Adjust font sizes for smaller screens */
+  
+    h1 {
+      font-size: 24px;
+    }
+  
+    h2 {
+      font-size: 20px;
+    }
+  
+    h3 {
+      font-size: 18px;
+    }
+  
+    p {
+      font-size: 16px;
+    }
+
+    /* Adjust project card styles for smaller screens */  
+    .project-card {
+      padding: 10px; /* Less padding (space around elements
+       on smaller screens */
+    }
+  }
+
+  html {
+    scroll-behavior: smooth;/* Smooth scrolling for anchor links */
+  }
+
+  /* Fade-in and slide-up animation 
+  As you reload the page, each section will slide up and fade in 
+  nicely when the page loads. It adds a dynamic, engaging vibe 
+  without overwhelming the content.*/
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  
+  
